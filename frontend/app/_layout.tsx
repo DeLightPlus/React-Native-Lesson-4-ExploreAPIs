@@ -23,8 +23,21 @@ export default function RootLayout() {
   return (
     <StripeProvider publishableKey="pk_test_51QV5eXKfXucQGnUWPUDI6M2raAoebipaveIJLPgZEgNoFgkKk7yRi1lZH7lXYEpoonLNYm1JmwovnwVQsYhnnX5h00fjH0z8uv">
       <Stack>
-        <Stack.Screen name="index" />
-        <Stack.Screen name="payment" />
+        <Stack.Screen name="index" 
+          options={{
+            title: 'Piggy Bank', 
+            headerStyle: { backgroundColor: '#f4511e' },
+            headerTintColor: '#fff',
+          }} 
+        />
+
+        <Stack.Screen name="payment" 
+          options={{
+            title: 'Payment',
+            headerStyle: { backgroundColor: 'wheat' },
+            headerTintColor: '#000',
+          }} 
+        />
       </Stack>
     </StripeProvider>
   );

@@ -17,7 +17,7 @@ console.log(process.env.STRIPE_SECRET_KEY);
 
 app.post('/payment-sheet', async (req, res) => {
   const { amount } = req.body;
-  console.log("reached out with amount: R", amount);
+  console.log("Reached out with amount: R", amount);
 
   // Use an existing Customer ID if this is a returning customer.
   const customer = await stripe.customers.create();
@@ -47,8 +47,7 @@ app.post('/payment-sheet', async (req, res) => {
 
 app.post("/payment-intent", async (req, res) => {
     const { amount } = req.body;
-    console.log(amount);
-    
+    console.log(amount);    
   
     try 
     {
